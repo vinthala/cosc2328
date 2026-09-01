@@ -1,0 +1,4 @@
+1. Pushing in this context is sending something further than the local sector it is at, while pulling is bringing something more global down to a more local element.
+2. We used the production port 8080 because we were producing something and we used the container port 3000 because we needed to contain the program in our local devices.
+3. It is safer to run your app on a non-root user instead of a user account because the git bash accounts are prone to being hacked; if the root account is hacked the entire thing may be lost, but if the user account is hacked then you can remove that account using the root account and make a new one.
+4. When the repository is public it means that the account can be accessed publicly through that repository; this is useful to students like me because it can give the instructor access to our work and because it allows us to access it in separate programs/apps like git bash.
