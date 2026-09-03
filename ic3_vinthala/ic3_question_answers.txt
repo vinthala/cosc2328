@@ -1,0 +1,4 @@
+1. The head of the page contains data that the browser sees such as the metadata and the title; the body holds texts, images, etc, stuff for the eyes of the site visitor.
+2. The difference between running the page at localhost:3000 and my-IP:8080 is that running it at the local port is more of a local thing to test it on the device while running it at the 8080 port is running it in a public space.
+3. In today's loop push was used to send the program to Github where it would be public and under the profile I made in Github, while pull allowed me to take a copy of program into the droplet where I could then publish it.
+4. We test on localhost:3000 to avoid sending incomplete and flawed files to production.
