@@ -1,0 +1,4 @@
+1. An unordered list is a bullet list while an ordered list is a number list; I would use <ul> when I want to put bullet points, and <ol> when I want to use numbered lists.
+2. A relative link is the right choice for a page on your own server so that the link can be accessed without the full absollute link and easier. Full absolute URL links should be used when a link to an outside source is used.
+3. alt text on an image is the descriptive text of the image; people who are visually impaired benefit from it.
+4. images/favorite.jpg being a relative path means it it is accessable within the directory.
