@@ -1,0 +1,4 @@
+1. The four layers of the box model are padding, border, margin, and content. The two that add to the total size of the element are padding and margin.
+2. margin: 16px auto means that the margin of the box from the top and bottom is 16px while the sides are automatically sized; it centers the box because auto automatically centers it since it has a fixed-width.
+3. A CSS variable is a variable defined in the CSS file; to define the variable you have to define it in root, and use --, in the CSS file;one example from my file is the primary-color variable.
+4. The selector .box h2 matches the headings; it is different from h2 itself because; it is different from h2 because it adds more than just the heading.
