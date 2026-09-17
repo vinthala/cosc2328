@@ -1,0 +1,4 @@
+Name: Val Inthalangsy
+SEU username: vinthala
+Droplet URL: http://142.93.252.209:8080/hw3/hw3.html
+GitHub repo: https://github.com/vinthala/cosc2328
