@@ -1,0 +1,4 @@
+1. The difference between <th> and <td> is what they contain; <th> contains table headers while <td> contains the table data.
+2. <thead>, <tbody>, and <tfoot> organize the parts of the table, much like <head> and <body> organize html files content; <thead> organizes the titles of the rows, while <tbody> organizes the data and <tfooter> organizes the data that goes at the footer of the table.
+3. What colspan="4" does is making the table horizontally organized by making on <td> as big as 4 of the usual <td> cells.
+4. border-collapse: collapse merges the double cell borders into one single pretty looking border, which makes our table easier to read.

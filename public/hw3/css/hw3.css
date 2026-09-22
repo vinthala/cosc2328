@@ -15,7 +15,7 @@
 
     #name {
         color: var(--name-color);
-        font-size: 64x;
+        font-size: 64px;
     }
 
     .subhead {
