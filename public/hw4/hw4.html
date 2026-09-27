@@ -1,0 +1,65 @@
+<!-- HW4 – COSC 2328 – Professor McCurry
+     Implemented by: Val Inthalangsy -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW4</title>
+  <link rel="stylesheet" href="css/hw4.css">
+</head>
+<body>
+    <header>
+        <h1>FutureWeb 2026 </h1>
+        <p> HW4</p>
+        <main class="container">
+            <div class="event-info">
+                <h2>Event Details</h2>
+                <ul>
+                    <li>Date</li>
+                    <li>Location</li>
+                    <li>Speakers</li>
+                </ul>
+                <img src="images/event.jpg" alt="a neck-below image of a man in a suit pointing to the bolded white text that says event in all caps">
+            </div>
+            </div>
+            <div class="registration-form">
+                <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend> Attendee Details
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" 
+                            placeholder="Enter your name" required>
+
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email"
+                            placeholder="email" required>
+
+                            <label for="date">Date of Arrival</label>
+                            <input type="date" id="date" name="date" 
+                            placeholder="Month/Day/Year" required>
+                        </legend>
+                    </fieldset>
+                    <fieldset>
+                        <Legend>Session Preferences
+                            <select>Track Selections
+                                <optgroup>
+                                    <option label="Frontend">eg. React, Vue, Css</option>
+                                </optgroup>
+                                <optgroup>
+                                    <option label="Backend">eg. Node.js, Python, Docker</option>
+                                </optgroup>
+                                <label >Upload Resume/Portfolio
+                                    <input type="file" accept=".pdf,.docx">
+                                </label>
+                            </select>
+                        </Legend>
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+    </header>
+</body>
+</html>
