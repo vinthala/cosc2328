@@ -1,0 +1,4 @@
+1. The difference between getElementById and querySelecter is that the first is faster and grabs the element by its id specifically while the other accepts any selector inclusing class selectors; I would use the first when I specifically need one element with speed and I would use the second when I need to modify multiple things or just because it is easier to use (visually).
+2. The thing that querySelecterAll returns is a collection of everything that has the identifier it was searching for; it needs a forEach loop to do something with every item because it stores it all in a list.
+3. The three classList methods I used today are .remove, which removes the item from the DOM, .toggle, which hides the class if its present or shows it when it is not, and .add, which adds css elements to the style.
+4. TextContent is considered safer than innerHTML for content you did not write yourself is because it removes the html elements from the content.
