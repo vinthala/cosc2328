@@ -15,7 +15,7 @@ const discountCodes = {
 
 const calculateTax = subtotal => subtotal * 0.0825;
 const applyDiscount = function(subtotal, code) { 
-    for (const discount of discountCodes) {
+    for (const x =0; x > discountCodes.length; x++) {
         let CODE = code.trim();
         CODE = CODE.toUpperCase();
         if (CODE === discount) {
@@ -31,7 +31,7 @@ const code = document.querySelector("#discount-code");
 const discountedSubtotalElement = document.querySelector(".discountAmount");
 const taxRate = document.querySelector("#tax");
 const totalPrice = document.querySelector("#total");
-const orderForm = document.querySelector("#order-form");
+const orderForm = document.querySelector("#orderForm");
 const productText = document.querySelector("#productText");
 const quantityText = document.querySelector("#quantity");
 const codeText = document.querySelector("#code");
