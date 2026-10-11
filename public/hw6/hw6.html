@@ -1,0 +1,56 @@
+<!-- HW6 – COSC 2328 – Professor McCurry
+     Implemented by: Val Inthalangsy-->
+     <!DOCTYPE html>
+     <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+            <title>HW6 - Interactive Product Calculator</title>
+            <link rel="stylesheet" href="css/hw6.css">
+            <script defer src="js/hw6-script.js"></script>
+        </head>
+        <body>
+            <header class="site-header">
+                <h1>Product Order Calculator</h1>
+                <main class="container">
+                    <form id="orderForm">
+                        <fieldset>
+                            <legend>Order Details
+                                <select id="product">
+                                    <option placeholder=""></option>
+                                    <optgroup label="apple">
+                                        <option>iphone</option>
+                                        <option>ipad</option>
+                                        <option>macbook</option>
+                                        <option>monitor</option>
+                                    </optgroup>
+
+                                    <optgroup label="android">
+                                        <option>mobile phone</option>
+                                        <option>tablet</option>
+                                        <option>windows</option>
+                                        <option>monitor</option>
+                                        
+                                    </optgroup>
+                                    <optgroup label="other brand">
+
+                                        <option>laptop</option>
+                                        <option>tablet</option>
+                                        <option>phone</option>
+                                        <option>monitor</option>
+                                    </optgroup>
+                                    <input type="number" id="quantity" min="1" max="10" value="1">
+                                    <input type="text" id="discountCode">
+                                    <button type="submit">Calculate Total</button>
+                            </legend>
+                        </fieldset>
+                    </form>
+                    <div id="results" class="results-hidden">
+                    </div>
+                    <footer class="site-footer">Name: Val Inthalangsy Course: COSC2328 with Dr. McCurry</footer>
+                    <noscript><div class="alert">Enable JavaScript to view interactive content.</div></noscript>
+                </main>
+            </header>
+        </body>
+
+     </html>
