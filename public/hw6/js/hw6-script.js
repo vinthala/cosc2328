@@ -63,7 +63,7 @@ orderForm.addEventListener("submit", function (e) {
         totalPrice.textContent = "\ntotal price: $" + total.toFixed(2);
         productText.textContent = "Product: " + theProduct;
         quantity.textContent = "Amount: " + numProducts;
-        actualSubtotal.textContent = "subtotal: " + subtotal.toFixed(2);
+        actualSubtotal.textContent = "subtotal: $" + subtotal.toFixed(2);
         
     }
 });
