@@ -14,56 +14,61 @@ const discountCodes = {
 }
 
 const calculateTax = subtotal => subtotal * 0.0825;
-const applyDiscount = function(subtotal, code) { 
-    for (const x =0; x > discountCodes.length; x++) {
-        let CODE = code.trim();
-        CODE = CODE.toUpperCase();
-        if (CODE === discount) {
-            return discount;
-        }
-    }
-    return 0;
+
+const applyDiscount = function(subtotal, code) {
+    const CODE = code.trim().toUpperCase();
+    if (discountCodes[CODE]) {
+       return subtotal * discountCodes[CODE];
+        
+    } else {return 0};
 }
 
 const product = document.getElementById("product");
 const quantity = document.getElementById("quantity");
-const code = document.querySelector("#discount-code");
-const discountedSubtotalElement = document.querySelector(".discountAmount");
+const code = document.querySelector("#discountCode");
+const discountedSubtotalElement = document.querySelector("#discountAmount");
 const taxRate = document.querySelector("#tax");
 const totalPrice = document.querySelector("#total");
 const orderForm = document.querySelector("#orderForm");
 const productText = document.querySelector("#productText");
-const quantityText = document.querySelector("#quantity");
-const codeText = document.querySelector("#code");
+const quantityText = document.querySelector("#numProducts");
+const actualSubtotal = document.querySelector("#actualSubtotal");
 orderForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const selectedProduct = e.target.product.value();
-    const productQuantity = e.target.parseInt(quantity.value());
-    const discountCode = e.target.code.value().trim();
-    if (!productPrices[selectedProduct]) {
-        alert("Invalid Product");
-        return;
-    } else if (productQuantity <= 0) {
+    const selectedProduct = e.target.product;
+    const productQuantity = e.target.quantity;
+    const discountCode = e.target.discountCode;
+    const theProduct = selectedProduct.value;
+    const numProducts = Number(productQuantity.value);
+    let theCode = discountCode.value;
+    theCode = theCode.trim();
+     if (numProducts <= 0) {
         alert("Invalid quantity");
         return;
     }
-    let subtotal = productPrices.selectedProduct * productQuantity;
-    let discountedAmount = applyDiscount(subtotal, discountCode);
-    let discountedSubtotal = (subtotal - discountedAmount);
-    let tax = calculateTax(discountedSubtotal);
-    let total = discountedSubtotal + tax;
+    if (!productPrices[theProduct]) {
+        alert("not a valid product");
+        return;
+    }else{
+        let subtotal = productPrices[theProduct] * numProducts;
+        let discountedAmount = applyDiscount(subtotal,theCode);
+        let discountedSubtotal = (subtotal - discountedAmount);
+        let tax = calculateTax(discountedSubtotal);
+        let total = discountedSubtotal + tax;
 
     
-    discountedSubtotalElement.textContent ="\ndiscounted Subtotal: $" + discountedSubtotal.toFixed(2);
-    taxRate.textContent = "\ntax: $" + tax.toFixed(2);
-    totalPrice.textContent = "\ntotal price: $" + total.toFixed(2);
-    productText.textContent = "Product: " + product.value();
-    quantityText.textContent = "Amount: " + quantity.value();
-    codeText.textContent = "discount code: " + code.value().trim();
+        discountedSubtotalElement.textContent ="discounted Subtotal: $" + discountedSubtotal.toFixed(2);
+        taxRate.textContent = "\ntax: $" + tax.toFixed(2);
+        totalPrice.textContent = "\ntotal price: $" + total.toFixed(2);
+        productText.textContent = "Product: " + theProduct;
+        quantity.textContent = "Amount: " + numProducts;
+        actualSubtotal.textContent = "subtotal: " + subtotal.toFixed(2);
+        
+    }
 });
 const result = document.querySelector("#results");
-result.classList.remove(".results-hidden");
+result.classList.remove("results-hidden");
 
 
 

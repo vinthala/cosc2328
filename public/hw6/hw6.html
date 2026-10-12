@@ -15,37 +15,32 @@
                 <main class="container">
                     <form id="orderForm">
                         <fieldset>
-                            <legend>Order Details
-                                <select id="product">
-                                    <optgroup label="apple">
-                                        <option>iphone</option>
-                                        <option>ipad</option>
-                                        <option>macbook</option>
-                                        <option>monitor</option>
-                                    </optgroup>
+                            <legend>Order Details</legend>
+                                <select id="product" label="products">
+                                    <optgroup>
+                                        <option value="" disabled selected placeholder>Pick a product</option>
+                                        <option value="laptop">laptop</option>
+                                        <option value="tablet">tablet</option>
+                                        <option value="phone">phone</option>
+                                        <option value="monitor">monitor</option>
+                                        </optgroup>
+                                </select>
 
-                                    <optgroup label="android">
-                                        <option>mobile phone</option>
-                                        <option>tablet</option>
-                                        <option>windows</option>
-                                        <option>monitor</option>
-                                        
-                                    </optgroup>
-                                    <optgroup label="other brand">
-
-                                        <option>laptop</option>
-                                        <option>tablet</option>
-                                        <option>phone</option>
-                                        <option>monitor</option>
-                                    </optgroup>
-                                    </select>
-                                    <input type="number" id="quantity" min="1" max="10" value="1">
-                                    <input type="text" id="discountCode">
-                                    <button type="submit">Calculate Total</button>
-                            </legend>
+                    <!-- I changed this to min="0" from min="1" in the instructions because it does not allow the alert for a quantity of 0 to show 6.7 instructions-->
+                                <input type="number" id="quantity" min="0" max="10" value="1" label="quantity">
+                                <input type="text" id="discountCode" label="discount Code">
+                                <button type="submit" label="submit button">Calculate Total</button>
                         </fieldset>
                     </form>
                     <div id="results" class="results-hidden">
+                        <ul >
+                            <li id="productText"></li>
+                            <li id="numProducts"></li>
+                            <li id="actualSubtotal"></li>
+                            <li id="discountAmount"></li>
+                            <li id="tax"></li>
+                            <li id="total"></li>
+                        </ul>
                     </div>
                     <footer class="site-footer">Name: Val Inthalangsy Course: COSC2328 with Dr. McCurry</footer>
                     <noscript><div class="alert">Enable JavaScript to view interactive content.</div></noscript>
