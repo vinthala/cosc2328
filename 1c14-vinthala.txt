@@ -1,0 +1,5 @@
+1. The product instances are reused while the plain object literals we used earlier could not be reused.
+2. The method defined on Product.prototype is more memory-efficient than aa method defined inside the constructor function itself because the data gets stale.
+3. In the instructor's class demo the thing that changed about how new Product(...) is called compared to your Step 5 function-based version in step five is that way is the new way to make instances.
+4. The super() inside PremiumProduct's constructor calls the constructor of product to make the premiumProduct; if it were called before the line that sets the this.warrantyYears, the constructor would not have made a new instance successfully.
+5. When I click "Sort by Price" it sorts the prices from the instances in the catalog from right to left and top to bottom; it runst .sort() and the compare function compares the prices and it hands the list in the right order back to the render functions.
