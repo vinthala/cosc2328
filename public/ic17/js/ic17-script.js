@@ -1,5 +1,10 @@
 // IC17 – COSC 2328 – Professor McCurry
 // Implemented by: val Inthalangsy
+//1. UseState returns the internal state of the object and the variable that is used to measure the state.
+//2. We write onClick={feedPet} instead of onClick={feedPet()} because adding the parameters would make it run immediately at render instead of onClick.
+//3. After clicking feed the hunger number of the screen updates to 35.
+//4. When hunger = 40 and energy = 80 the pet's mood that matches that condition is not hunger < 30 && energy >70, energy <25, or hunger > 75, which returns okay with the stoic emoji.
+//5.I am confused on this question because the condition we used in that had the and operator in getPetMood() is hunger < 30 && energy > 70 when we compare that to {hunger > 80 && <p>...</p> we are now asking if the pet is starving and <p>...</p> is not null. It is appropriate to use the first one when we need the pet well fed and energetic and the second one when we need the pet starving and <p>...</p> is not falsy.
 
 
 //Debug: confirm CDN scripts loaded before any JSX runs
