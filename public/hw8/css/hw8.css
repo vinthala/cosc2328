@@ -1,0 +1,78 @@
+/* HW8 – COSC 2328 – Professor McCurry
+   Implemented by: Val Inthalangsy*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #89d8a9;
+}
+
+.app-container{
+    font-family: Geneva, sans-serif;
+    min-height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #56b57c;
+
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 5fr;  
+    input[type="text"] {
+        padding: 1px;
+        border: 5px solid #475594;
+        block-size: 30px;
+    }
+    button {
+        padding: 1px;
+        border: 5px solid #475594;
+        background: #1e8137;
+        block-size: 30px;
+    }
+    select {
+        padding: 1px;
+        border: 5px solid #475594;
+        block-size: 30px;
+    }
+
+    .task-list{
+        .task-card{
+            .badge-high{
+                color: red;
+            }
+            .badge-medium{
+                color: orange;
+            }
+            padding: 10px;
+            border: 5px solid #475594;
+            border-radius: 10px;
+            margin: auto 10px;
+        }
+    }
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .form{ grid-template-columns: repeat(2, 2fr); }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .form{ grid-template-columns: repeat(4, 3fr); }
+}
+
+.form .clear-button{
+    visibility: hidden;
+    border: 5px solid #212537;
+    background-color: #70512a;
+    position-area: top left;
+}
