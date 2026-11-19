@@ -12,6 +12,17 @@ router.get('/students', (req, res) => {
     res.json(rows);
   });
 });
+router.get('/students/by-class/:classification', (req, res) => {
+  const cls = req.params.classification;
+  db.all(
+    'SELECT * FROM students WHERE classification = ? ORDER BY last_name',
+    [cls],
+    (err, rows) => {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json(rows);
+    }
+  );
+});
 router.get('/students/:id', (req, res) => {
   const id = req.params.id;
   db.get(
