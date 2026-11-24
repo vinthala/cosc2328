@@ -7,6 +7,7 @@ const app     = express();                               // create the Express a
 const PORT = process.env.PORT || 3000;                                     // the port your browser connects to
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public"))); // serve every file in public/ as a static file
 
 
@@ -27,6 +28,7 @@ app.use("/ic20", require("./routes/ic20-routes"));
 app.use("/ic22", require("./routes/ic22-routes"));
 app.use("/ic23", require("./routes/ic23-routes"));
 app.use('/hw9', require('./routes/hw9-routes'));  // NEW — HW9: mount hw9 router
+app.use('/hw10', require('./routes/hw10-routes'));  // NEW — HW10: mount hw10 router
 app.listen(PORT, "0.0.0.0", () =>                       // 0.0.0.0 makes the server reachable from the droplet (IC2)
   console.log(`Running on http://localhost:${PORT}`)
 );
